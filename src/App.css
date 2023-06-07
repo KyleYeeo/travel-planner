@@ -1,0 +1,187 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;    
+    font-family: 'Montserrat', sans-serif;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bg {
+    object-fit: cover;
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.container {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    min-height: 400px;
+    width: 550px;
+    padding: 20px;
+    /* blur effect */
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #1C6758;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    font-family: 'Montserrat', sans-serif;
+    padding: 13px 45px 13px 13px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    margin: 10px 0;
+}
+
+.item div {
+    display: flex;
+    margin-left: auto;
+}
+
+button {
+    padding: 0;
+    border: none;
+    height: 40px;
+}
+
+.del-check, .put-check {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+}
+
+.add-btn {
+    width: 40px;
+    margin-left: -46px;
+    opacity: .7;
+}
+
+.del-btn, .edit-btn {
+    width: 35px;
+    margin-right: 4px;
+    opacity: .8;
+}
+
+.add-btn:hover, .del-btn:hover, .edit-btn:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0 10px 8px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    font-size: 20px;
+    color: #4E3D53;
+    width: 100%;
+    margin: 5px 0;
+}
+
+@media all and (max-width: 600px) {
+    .container {
+        width: 450px;
+    } 
+
+    .del-check, .put-check {
+        width: 30px;
+        height: 30px;
+    }
+
+    .del-btn, .edit-btn {
+        width: 30px;
+        margin-right: 3px;
+    }
+
+    .item {
+        padding: 10px 0 10px 6px;
+        font-size: 18px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .container {
+        width: 350px;
+        padding: 10px;
+    } 
+
+    .del-check, .put-check {
+        width: 25px;
+        height: 25px;
+    }
+
+    .del-btn, .edit-btn {
+        width: 25px;
+    }
+
+    .item {
+        font-size: 16px;
+    }
+}
+
+@media all and (max-width: 380px) {
+    h1 {
+        font-size: 25px;
+    }
+    .container {
+        width: 280px;
+        padding: 10px;
+    } 
+
+    input {
+        padding: 9px 34px 9px 9px;
+    }
+
+    button {
+        height: 30px;
+    }
+
+    .add-btn {
+        width: 30px;
+        margin-left: -36px;
+    }
+
+    .del-check, .put-check {
+        width: 20px;
+        height: 20px;
+    }
+
+    .del-btn, .edit-btn {
+        width: 20px;
+    }
+
+    .item, input {
+        font-size: 14px;
+    }
+}
+
